@@ -1,0 +1,110 @@
+body {
+  width: 100%;
+  margin: 10px;
+}
+
+:root {
+  --success: #4caf50;
+  --info: #2196f3;
+  --error: #f44336;
+  --warning: rgb(220, 173, 85);
+}
+
+.toast {
+  position: fixed;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.5s;
+  animation: slideIn 0.5s;
+}
+
+.toast-dark {
+  background-color: #333;
+}
+
+.toast-light {
+  background-color: #f4f4f4;
+  color: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.toast-info {
+  background-color: var(--info);
+}
+
+.toast-success {
+  background-color: var(--success);
+}
+
+.toast-error {
+  background-color: var(--error);
+}
+
+.toast-warning {
+  background-color: var(--warning);
+}
+
+.toast-top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.toast-top-center {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.toast-top-right {
+  top: 20px;
+  right: 20px;
+}
+
+.toast-bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+
+.toast-bottom-center {
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.toast-bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+.toast:hover {
+  transform: scale(1.1);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+#newToast {
+  background-color: rgb(220, 173, 85);
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#newToast:active {
+  scale: 0.9;
+}
+
+#newToast:hover {
+  background-color: rgb(198, 155, 76);
+}
